@@ -19,7 +19,8 @@ fileSeparator           | String to put between the files; defaults to empty Str
 outputFileName          | The output file name; defaults to `main.js`
 includeFilter in concat | The files to concatenate; defaults to JavaScript assets
 
-To play around with it, go to the `sbt-concat-example` project, run `sbt` and then `web-pipeline`. You cannot execute
-`concat` directly because the task is a function that requires input mappings (take a look at it via `show concat`).
+To play around with it, go to the `sbt-concat-example` project, run `sbt` and then `;clean;web-pipeline`. You cannot 
+execute `concat` directly because the task is a function that requires input mappings (take a look at it via `show concat`).
+The resulting files will be in `sbt-concat-example/target/web/assets-managed/main/concat`.
 
 Also check out the [slides](http://www.slideshare.net/marius-soutier/sbt-webintro) for a talk I gave about sbt-web.
