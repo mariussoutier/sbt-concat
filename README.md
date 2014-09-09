@@ -16,8 +16,21 @@ You can control the plugin by importing `ConcatKeys._` and overriding any of the
 Option                  | Description
 ------------------------|------------
 fileSeparator           | String to put between the files; defaults to empty String
-outputFileName          | The output file name; defaults to `main.js`
 includeFilter in concat | The files to concatenate; defaults to JavaScript assets
+concatOpts              | Concatenation definitions; default to main.js from includeFilter in concat
+
+Example how to configure plugin:
+```
+ConcatKeys.fileSeparator := "\n"
+
+ConcatKeys.concatOpts := Map(
+  "javascripts/first.js" -> new FileFilter {
+    override def accept(pathname: File): Boolean = {
+      pathname.getName == "a.js" || pathname.getName == "b.js"
+    }
+  }
+)
+```
 
 To play around with it, go to the `sbt-concat-example` project, run `sbt` and then `;clean;web-pipeline`. You cannot 
 execute `concat` directly because the task is a function that requires input mappings (take a look at it via `show concat`).

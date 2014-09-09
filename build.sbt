@@ -1,8 +1,10 @@
 sbtPlugin := true
 
+organization := "com.mariussoutier.sbt"
+
 name := "sbt-concat"
 
-version := "1.0"
+version := "1.0.1-SNAPSHOT"
 
 scalaVersion := "2.10.4"
 
