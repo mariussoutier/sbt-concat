@@ -20,7 +20,7 @@ includeFilter in concat | The files to concatenate; defaults to JavaScript asset
 concatOpts              | Concatenation definitions; default to main.js from includeFilter in concat
 
 Example how to configure plugin:
-```
+``` scala
 ConcatKeys.fileSeparator := "\n"
 
 ConcatKeys.concatOpts := Map(
