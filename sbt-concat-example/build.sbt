@@ -1,6 +1,5 @@
 import com.mariussoutier.sbt.Imports.ConcatKeys
 import NameFilter._
-import com.mariussoutier.sbt.Imports.ConcatKeys
 
 name := "sbt-concat-example"
 
